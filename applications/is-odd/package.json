@@ -1,0 +1,14 @@
+{
+  "name": "is-odd",
+  "version": "1.0.0",
+  "main": "buid/index.js",
+  "scripts": {
+    "build": "tsc index.ts --outDir build ",
+    "start": "ts-node index.ts"
+  },
+  "dependencies": {
+    "is-even": "*",
+    "tsconfig": "*"
+  },
+  "devDependencies": {}
+}
