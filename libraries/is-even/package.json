@@ -6,7 +6,8 @@
     "start": "ts-node index.ts"
   },
   "dependencies": {
-    "tsconfig": "*"
+    "tsconfig": "*",
+    "nodemon-config": "*"
   },
   "devDependencies": {}
 }
