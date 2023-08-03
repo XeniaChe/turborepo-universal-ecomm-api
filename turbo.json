@@ -11,7 +11,7 @@
       "dependsOn": ["build"],
       "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx"]
     },
-    "lint": {},
+    "lint": { "cache": false },
     "start": {
       "cache": false,
       "persistent": true

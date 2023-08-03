@@ -1,1 +1,4 @@
-export const test = '2345';
+export const test = '3456';
+
+let ddd = 48409;
+console.log(ddd);
