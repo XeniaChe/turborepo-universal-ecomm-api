@@ -4,11 +4,11 @@ To run .ts files in watchin mode plase run 'npm run start' in a root folder
 
 ## Running tasks in a specific workspace
 
-turbo run <task> --filter <workspace>
+turbo run {task} --filter {workspace}
 
 ## Install a package in a workspace
 
-npm install <package> --workspace=<workspace>
+npm install {package} --workspace={workspace}
 
 ## ESlint
 
