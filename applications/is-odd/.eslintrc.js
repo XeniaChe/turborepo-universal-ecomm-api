@@ -1,3 +1,6 @@
+/* In case of Eslint parsing error, replace './tsconfig.json' assigned for 'project' property of  parserOptions
+  with './tsconfig.eslint.json' */
+
 module.exports = {
   root: true,
   extends: ['custom'],
