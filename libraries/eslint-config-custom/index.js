@@ -8,6 +8,7 @@ module.exports = {
   ],
   plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',
+  ignorePatterns: ['**/build/**/*.js', '**/.eslintrc.*'],
   env: {
     node: true,
   },
