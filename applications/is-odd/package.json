@@ -1,0 +1,17 @@
+{
+  "name": "is-odd",
+  "version": "1.0.0",
+  "main": "./index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "nodemon index.ts",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "is-even": "*",
+    "tsconfig": "*",
+    "nodemon-config": "*",
+    "eslint-config-custom": "*"
+  },
+  "devDependencies": {}
+}
