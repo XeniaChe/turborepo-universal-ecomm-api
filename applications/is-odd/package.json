@@ -5,7 +5,9 @@
   "scripts": {
     "build": "tsc",
     "start": "nodemon index.ts",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "is-even": "*",

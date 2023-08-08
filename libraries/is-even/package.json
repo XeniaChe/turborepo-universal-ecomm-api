@@ -5,7 +5,9 @@
   "scripts": {
     "build": "tsc",
     "start": "ts-node index.ts",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "tsconfig": "*",

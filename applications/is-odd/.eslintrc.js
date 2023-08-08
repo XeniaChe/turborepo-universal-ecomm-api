@@ -1,18 +1,7 @@
-/* In case of Eslint parsing error, replace './tsconfig.json' assigned for 'project' property of  parserOptions
-  with './tsconfig.eslint.json' */
-
 module.exports = {
   root: true,
   extends: ['custom'],
-  /*   To leverage the rules which require type information for ALL files extensions.
-  Use 'overrides' to configure this option ONLY for a specific file extensions (e.g. *.ts)
-  
-  parserOptions: {
-    sourceType: 'module',
-    project: './tsconfig.json',
-    tsconfigRootDir: __dirname,
-  },
-  */
+
   rules: {
     // Add some rules that will be applied LOCALY for a given package and take PRECEDENCE over those declared in 'custom' configs
   },
@@ -21,12 +10,19 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx'],
       parserOptions: {
-        project: './tsconfig.json',
+        project: './tsconfig.eslint.json',
         tsconfigRootDir: __dirname,
       },
       rules: {
         // This rule requires the TypeScript type checker to be present when it runs
         '@typescript-eslint/await-thenable': 'error',
+      },
+    },
+    {
+      files: ['**/*.test.ts', '**/*.spec.ts'],
+      parserOptions: {
+        project: './tsconfig.spec.json',
+        tsconfigRootDir: __dirname,
       },
     },
   ],
