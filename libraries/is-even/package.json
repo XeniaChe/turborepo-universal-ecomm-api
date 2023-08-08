@@ -1,7 +1,7 @@
 {
   "name": "is-even",
   "version": "1.0.0",
-  "main": "./index.ts",
+  "main": "./index.js",
   "scripts": {
     "build": "tsc",
     "start": "ts-node index.ts",
