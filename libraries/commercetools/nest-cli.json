@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "commercetools": {
+      "type": "library",
+      "root": "libs/commercetools",
+      "entryFile": "index",
+      "sourceRoot": "libs/commercetools/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/commercetools/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
+}
