@@ -1,0 +1,7 @@
+{
+  "compilerOptions": { "composite": true },
+  "extends": "./tsconfig.json",
+  "exclude": ["node_modules", "test", "build"]
+  // TODO: check if .test. files  should not be excluded from /build
+  // "exclude": ["node_modules", "test", "build", "**/*spec.ts"]
+}
