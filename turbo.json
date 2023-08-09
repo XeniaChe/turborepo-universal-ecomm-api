@@ -13,8 +13,10 @@
     "test:watch": {
       "cache": false
     },
+    "test:e2e": {},
     "lint": { "cache": false },
-    "start": {
+    "start": {},
+    "start:dev": {
       "cache": false,
       "persistent": true
     }

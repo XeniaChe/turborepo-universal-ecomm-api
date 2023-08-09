@@ -10,9 +10,8 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "tsconfig": "*",
+    "eslint-config-custom": "*",
     "nodemon-config": "*",
-    "eslint-config-custom": "*"
-  },
-  "devDependencies": {}
+    "tsconfig": "*"
+  }
 }

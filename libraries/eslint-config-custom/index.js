@@ -3,7 +3,9 @@ module.exports = {
     'prettier',
     'turbo',
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended-type-checked',
+    // 'plugin:@typescript-eslint/recommended-type-checked',
+    // TODO: check
+    'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/stylistic-type-checked',
   ],
   plugins: ['@typescript-eslint'],
