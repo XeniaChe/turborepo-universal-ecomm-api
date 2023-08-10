@@ -13,7 +13,8 @@
     "is-even": "*",
     "tsconfig": "*",
     "nodemon-config": "*",
-    "eslint-config-custom": "*"
+    "eslint-config-custom": "*",
+    "commercetools": "*"
   },
   "devDependencies": {}
 }

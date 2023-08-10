@@ -1,12 +1,12 @@
 {
   "projects": {
-    "commercetools": {
+    "customers": {
       "type": "library",
-      "root": "libs/commercetools",
+      "root": "./src",
       "entryFile": "index",
-      "sourceRoot": "libs/commercetools/src",
+      "sourceRoot": "./src",
       "compilerOptions": {
-        "tsConfigPath": "libs/commercetools/tsconfig.lib.json"
+        "tsConfigPath": "./tsconfig.lib.json"
       }
     }
   },

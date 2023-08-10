@@ -3,8 +3,6 @@
   "compilerOptions": {
     "declaration": true,
     "allowSyntheticDefaultImports": true,
-    // "target": "ES2021",
-    // "sourceMap": true,
     "rootDir": ".",
     "outDir": "./build",
     "baseUrl": "./",
