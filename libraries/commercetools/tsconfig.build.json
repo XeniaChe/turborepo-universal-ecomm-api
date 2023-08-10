@@ -1,5 +1,5 @@
 {
-  "compilerOptions": { "composite": true },
+  "compilerOptions": { "composite": true, "outDir": "../../build/out-tsc" },
   "extends": "./tsconfig.json",
   "exclude": ["node_modules", "test", "build"]
 }

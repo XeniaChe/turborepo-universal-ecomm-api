@@ -8,7 +8,7 @@ export class CustomersService {
   constructor(private readonly commerceTools: CommercetoolsService) {}
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   create(createCustomerDto: CreateCustomerDto) {
-    return 'This action adds a new customer';
+    return 'This action adds a newssss customer';
   }
 
   async findAll() {

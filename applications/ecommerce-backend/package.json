@@ -8,7 +8,7 @@
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "ts-node ./src/main.ts",
+    "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node build/main",
@@ -24,8 +24,8 @@
     "@nestjs/core": "^10.0.0",
     "@nestjs/mapped-types": "^2.0.2",
     "@nestjs/platform-express": "^10.0.0",
-    "eslint-config-custom": "*",
     "commercetools": "*",
+    "eslint-config-custom": "*",
     "nodemon-config": "*",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",

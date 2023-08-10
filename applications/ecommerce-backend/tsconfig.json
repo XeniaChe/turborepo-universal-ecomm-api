@@ -4,15 +4,9 @@
     "declaration": true,
     "allowSyntheticDefaultImports": true,
     "rootDir": ".",
-    "outDir": "./build",
+    "outDir": "../../build/out-tsc",
     "baseUrl": "./",
     "incremental": true
-    // "skipLibCheck": true,
-    // "strictNullChecks": false, // TODO: check
-    // "noImplicitAny": false,
-    // "strictBindCallApply": false,
-    // "forceConsistentCasingInFileNames": false,
-    // "noFallthroughCasesInSwitch": false
   },
   "references": [{ "path": "tsconfig.build.json" }]
 }

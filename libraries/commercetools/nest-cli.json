@@ -6,11 +6,10 @@
       "entryFile": "index",
       "sourceRoot": "./src",
       "compilerOptions": {
-        "tsConfigPath": "./tsconfig.lib.json"
+        "tsConfigPath": "./tsconfig.lib.json",
+        "deleteOutDir": true,
+        "webpack": false
       }
     }
-  },
-  "compilerOptions": {
-    "webpack": true
   }
 }

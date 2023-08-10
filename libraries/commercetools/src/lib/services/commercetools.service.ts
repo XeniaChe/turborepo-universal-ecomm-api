@@ -6,6 +6,13 @@ export class CommercetoolsService {
   constructor(private client: CommercetoolsClientService) {}
 
   async getCustomers() {
-    return await this.client.customers().get().execute();
+    try {
+      const customers = await this.client.customers().get().execute();
+      return customers;
+    } catch (error) {
+      console.error(error);
+
+      return undefined;
+    }
   }
 }
