@@ -20,7 +20,7 @@
     "start": { "dependsOn": ["^start"], "cache": false },
     "start:dev": {
       "cache": false,
-      "persistent": true
+      "dependsOn": ["^start"]
     }
   }
 }
