@@ -7,7 +7,8 @@ export class CommercetoolsService {
 
   async getCustomers() {
     try {
-      const customers = await this.client.customers().get().execute();
+      const customers = (await this.client.customers().get().execute()).body
+        .results;
       return customers;
     } catch (error) {
       console.error(error);

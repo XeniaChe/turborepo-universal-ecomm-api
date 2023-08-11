@@ -14,16 +14,11 @@ import { ConfigService } from '@nestjs/config';
 @Injectable()
 export class CommercetoolsClientService {
   readonly #apiRoot: ApiRoot;
-
   readonly #projectKey: string;
-  // readonly #region: string;
-  // readonly #scopes_raw = <string>(<unknown>process.env.CTP_SCOPES);
-  readonly #scopes: string[];
 
   constructor(private readonly config: ConfigService) {
+    this.#projectKey = config.get<string>('CTP_PROJECT_KEY')!;
     this.#apiRoot = this.#getApiRoot();
-    this.#projectKey = config.get('.CTP_PROJECT_KEY')!;
-    this.#scopes = config.get('CTP_SCOPES')?.split(' ');
   }
 
   customers() {
@@ -33,35 +28,26 @@ export class CommercetoolsClientService {
   }
 
   #getApiRoot() {
-    const projectKey = this.config.get('CTP_PROJECT_KEY')!;
     const scopes = this.config.get('CTP_SCOPES')?.split(' ');
 
-    console.log('ProjKey ' + this.#projectKey);
-    // console.log('Scopes' + this.#scopes);
-    console.log({ projectKey });
-
-    console.log(
-      'CONFIG : ' + JSON.stringify(this.config.get<string>('COMTOOLS_PORT'))
-    );
     const authMiddlewareOptions: AuthMiddlewareOptions = {
-      host: /* <string>this.config.get('CTP_AUTH_URL')! */ 'https://auth.europe-west1.gcp.commercetools.com',
-      projectKey,
+      host: this.config.get<string>('CTP_AUTH_URL')!,
+      projectKey: this.#projectKey,
       credentials: {
-        clientId: <string>this.config.get('CTP_CLIENT_ID')!,
-        clientSecret: <string>this.config.get('CTP_CLIENT_SECRET')!,
+        clientId: this.config.get<string>('CTP_CLIENT_ID')!,
+        clientSecret: this.config.get<string>('CTP_CLIENT_SECRET')!,
       },
       scopes,
       fetch,
     };
 
-    // Configure httpMiddlewareOptions
     const httpMiddlewareOptions: HttpMiddlewareOptions = {
-      host: <string>this.config.get('CTP_API_URL')!,
+      host: this.config.get<string>('CTP_API_URL')!,
       fetch,
     };
 
     const client = new ClientBuilder()
-      .withProjectKey(projectKey)
+      .withProjectKey(this.#projectKey)
       .withClientCredentialsFlow(authMiddlewareOptions)
       .withHttpMiddleware(httpMiddlewareOptions)
       .withLoggerMiddleware()
