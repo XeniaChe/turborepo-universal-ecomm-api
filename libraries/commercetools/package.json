@@ -2,7 +2,7 @@
   "name": "commercetools",
   "version": "1.0.0",
   "main": "../../build/out-tsc/src/index.js",
-  "types": "src/index.ts",
+  "types": "../../build/out-tsc/src/index.d.ts",
   "scripts": {
     "build": "nest build",
     "start": "nest start",

@@ -4,7 +4,6 @@
     "declaration": true,
     "allowSyntheticDefaultImports": true,
     "rootDir": ".",
-    "outDir": "../../build/out-tsc",
     "baseUrl": "./",
     "incremental": true
   },

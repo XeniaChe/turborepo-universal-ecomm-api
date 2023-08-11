@@ -4,9 +4,9 @@
       "type": "library",
       "root": "./src",
       "entryFile": "index",
-      "sourceRoot": "./src",
+      "sourceRoot": "../../build/out-tsc/src",
       "compilerOptions": {
-        "tsConfigPath": "./tsconfig.lib.json",
+        "tsConfigPath": "./tsconfig.json",
         "deleteOutDir": true,
         "webpack": false
       }
