@@ -2,10 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "globalDotEnv": [".env"],
   "pipeline": {
-    "build": {
-      "dependsOn": ["^build"],
-      "cache": false
-    },
+    "build": { "cache": false, "dependsOn": ["^build"] },
     "deploy": {
       "dependsOn": ["build", "test", "lint"]
     },
@@ -18,11 +15,9 @@
     "test:e2e": {},
     "lint": { "cache": false },
     "start": {
-      "dependsOn": ["^build", "build", "^start"],
       "cache": false
     },
     "start:dev": {
-      "dependsOn": ["^build", "build", "^start"],
       "cache": false
     }
   }
