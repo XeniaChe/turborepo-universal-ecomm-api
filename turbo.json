@@ -17,7 +17,7 @@
     },
     "test:e2e": {},
     "lint": { "cache": false },
-    "start": { "dependsOn": ["^start"], "cache": false },
+    "start": { "dependsOn": ["^build"], "cache": false },
     "start:dev": {
       "cache": false,
       "dependsOn": ["^start"]
