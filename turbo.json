@@ -17,10 +17,13 @@
     },
     "test:e2e": {},
     "lint": { "cache": false },
-    "start": { "dependsOn": ["^build"], "cache": false },
+    "start": {
+      "dependsOn": ["^build", "build", "^start"],
+      "cache": false
+    },
     "start:dev": {
-      "cache": false,
-      "dependsOn": ["^start"]
+      "dependsOn": ["^build", "build", "^start"],
+      "cache": false
     }
   }
 }
