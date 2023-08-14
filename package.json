@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "build": "turbo run build",
+    "build:prod": "turbo run build:prod",
     "start": "turbo run start",
     "start:dev": "turbo run start:dev",
     "clean": "turbo run clean",
