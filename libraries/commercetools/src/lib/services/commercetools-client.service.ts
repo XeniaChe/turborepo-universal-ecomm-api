@@ -30,6 +30,8 @@ export class CommercetoolsClientService {
   #getApiRoot() {
     const scopes = this.config.get('CTP_SCOPES')?.split(' ');
 
+    //TODO: delete after fixed 'nest circular dep-cies issue'
+    console.log('Pr Key: ' + this.#projectKey);
     const authMiddlewareOptions: AuthMiddlewareOptions = {
       host: this.config.get<string>('CTP_AUTH_URL')!,
       projectKey: this.#projectKey,

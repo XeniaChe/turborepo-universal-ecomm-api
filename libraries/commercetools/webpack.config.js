@@ -10,13 +10,16 @@ const isProduction =
 const mode = isProduction ? 'production' : 'development';
 const devtool = isProduction ? false : 'inline-source-map';
 
+//TODO: look into nest circular dependencies issue.
+// Why 'commerceTools' depends on 'ecommerce-backend' ???
+
 module.exports = function (options, webpack) {
   return {
-    entry: ['webpack/hot/poll?100', './src/main.ts'],
+    entry: ['webpack/hot/poll?100', './src/index.ts'],
     output: {
       library: { type: 'commonjs' },
-      path: path.join(__dirname, '../../build/out-tsc/src/'),
-      filename: 'main.js',
+      path: path.join(__dirname, '../../build/out-tsc/src'),
+      filename: 'index.js',
     },
     optimization: {
       minimize: false,
