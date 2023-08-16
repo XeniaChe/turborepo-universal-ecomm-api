@@ -5,7 +5,7 @@
   "scripts": {
     "build": "turbo run build",
     "build:prod": "turbo run build:prod",
-    "start": "turbo run build --filter=ecommerce-backend && turbo run start --filter=commercetools",
+    "start": "turbo run start",
     "start:dev": "turbo run start:dev",
     "clean": "turbo run clean",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
