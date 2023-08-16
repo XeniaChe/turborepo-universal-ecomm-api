@@ -47,4 +47,6 @@ RUN adduser --system --uid 1001 expressjs
 USER expressjs
 COPY --from=installer /app .
 
+EXPOSE 4000
+
 CMD node build/out-tsc/src/main.js
