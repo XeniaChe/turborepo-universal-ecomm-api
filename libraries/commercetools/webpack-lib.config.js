@@ -2,16 +2,12 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
-const { RunScriptWebpackPlugin } = require('run-script-webpack-plugin');
 
 const isProduction =
   typeof process.env.NODE_ENV !== 'undefined' &&
   process.env.NODE_ENV === 'production';
 const mode = isProduction ? 'production' : 'development';
 const devtool = isProduction ? false : 'inline-source-map';
-
-//TODO: look into nest circular dependencies issue.
-// Why 'commerceTools' depends on 'ecommerce-backend' ???
 
 module.exports = function (options, webpack) {
   return {
@@ -53,8 +49,6 @@ module.exports = function (options, webpack) {
       new webpack.WatchIgnorePlugin({
         paths: [/\.js$/, /\.d\.ts$/],
       }),
-      // TODO: bing back once configs corrected
-      new RunScriptWebpackPlugin({ name: options.output.filename }),
     ],
   };
 };

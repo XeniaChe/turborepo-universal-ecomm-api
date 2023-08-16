@@ -5,8 +5,7 @@
   "types": "./src/index.ts",
   "scripts": {
     "build": "nest build",
-    "build:prod": "nest build --webpack --webpackPath webpack.config.js",
-    "start": "nest start",
+    "build:prod": "nest build --webpack --webpackPath ./webpack-lib.config.js",
     "lint": "eslint .",
     "test": "jest",
     "test:watch": "jest --watch"

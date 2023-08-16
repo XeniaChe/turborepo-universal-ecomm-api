@@ -3,6 +3,7 @@
   "globalDotEnv": [".env"],
   "pipeline": {
     "build": { "cache": false, "dependsOn": ["^build"] },
+    "build:prod": { "cache": false, "dependsOn": ["^build:prod"] },
     "deploy": {
       "dependsOn": ["build", "test", "lint"]
     },
@@ -15,7 +16,8 @@
     "test:e2e": {},
     "lint": { "cache": false },
     "start": {
-      "cache": false
+      "cache": false,
+      "dependsOn": ["build"]
     },
     "start:dev": {
       "cache": false
