@@ -6,6 +6,9 @@ services:
     build:
       context: .
       dockerfile: ./applications/ecommerce-backend/Dockerfile
+    image: ecommerce-backend
+    env_file:
+      - ./applications/ecommerce-backend/.env
     restart: always
     ports:
       - 3000:3000
