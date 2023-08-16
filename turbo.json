@@ -3,11 +3,15 @@
   "globalDotEnv": ["./applications/ecommerce-backend/.env"],
   "pipeline": {
     "build": {
-      "cache": false,
+      "cache": true,
       "dependsOn": ["^build"],
       "dotEnv": ["./applications/ecommerce-backend/.env"]
     },
-    "build:prod": { "cache": false, "dependsOn": ["^build:prod"] },
+    "build:prod": {
+      "cache": true,
+      "dependsOn": ["^build:prod"],
+      "dotEnv": ["./applications/ecommerce-backend/.env"]
+    },
     "deploy": {
       "dependsOn": ["build", "test", "lint"]
     },
