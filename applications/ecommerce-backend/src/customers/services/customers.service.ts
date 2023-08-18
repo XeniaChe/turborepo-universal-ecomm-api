@@ -1,18 +1,22 @@
 import { Injectable } from '@nestjs/common';
 import { CreateCustomerDto } from '../dto/create-customer.dto';
 import { UpdateCustomerDto } from '../dto/update-customer.dto';
-import { CommercetoolsService } from 'commercetools';
+// import { CommercetoolsService } from 'commercetools';
+import { UniversalApiService } from 'universal-api';
 
 @Injectable()
 export class CustomersService {
-  constructor(private readonly commerceTools: CommercetoolsService) {}
+  constructor(
+    // private readonly commerceTools: CommercetoolsService,
+    private readonly universalService: UniversalApiService,
+  ) {}
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   create(createCustomerDto: CreateCustomerDto) {
     return 'This action adds a newssss customer';
   }
 
   async findAll() {
-    return await this.commerceTools.getCustomers();
+    return await this.universalService.getCustomers();
   }
 
   findOne(id: number) {
