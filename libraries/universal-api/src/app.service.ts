@@ -16,4 +16,8 @@ export class UniversalApiService {
   getCustomers() {
     return this.ecommProvider.getCustomers();
   }
+
+  getProducts() {
+    return this.ecommProvider.getProducts();
+  }
 }

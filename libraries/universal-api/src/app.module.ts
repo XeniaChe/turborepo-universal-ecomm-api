@@ -1,4 +1,4 @@
-import { Module, DynamicModule /* , Provider */ } from '@nestjs/common';
+import { Module, DynamicModule /* , Provider */, Global } from '@nestjs/common';
 import { UniversalApiService } from './app.service';
 import { CommercetoolsModule, CommercetoolsClientService } from 'commercetools';
 import { TestModule, TestLibService } from 'test-lib';
@@ -12,7 +12,7 @@ interface EcommerceProviderConfigs {
   CTP_SCOPES: string;
   CTP_REGION: string;
 }
-
+@Global()
 @Module({})
 export class UniversalApiModule {
   // Dynamic module

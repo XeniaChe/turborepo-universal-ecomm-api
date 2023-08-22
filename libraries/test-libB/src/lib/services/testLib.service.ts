@@ -20,4 +20,15 @@ export class TestLibService {
       return undefined;
     }
   }
+
+  async getProducts() {
+    try {
+      const products = ['test-prod1', 'test-prod2'];
+      return products;
+    } catch (error) {
+      console.error(error);
+
+      return undefined;
+    }
+  }
 }

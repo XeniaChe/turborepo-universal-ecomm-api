@@ -33,14 +33,6 @@ export class CommercetoolsClientService {
     this.#apiRoot = this.#getApiRoot();
   }
 
-  customers() {
-    return this.#apiRoot
-      .withProjectKey({ projectKey: this.#projectKey })
-      .customers()
-      .get()
-      .execute();
-  }
-
   async getCustomers() {
     const customers = (
       await this.#apiRoot
@@ -50,6 +42,18 @@ export class CommercetoolsClientService {
         .execute()
     ).body.results;
     return customers;
+  }
+
+  async getProducts() {
+    const products = (
+      await this.#apiRoot
+        .withProjectKey({ projectKey: this.#projectKey })
+        .products()
+        .get()
+        .execute()
+    ).body.results;
+
+    return products;
   }
 
   #getApiRoot() {
