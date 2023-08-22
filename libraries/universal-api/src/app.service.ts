@@ -1,5 +1,5 @@
 import { Injectable, Inject } from '@nestjs/common';
-import { CommercetoolsService } from 'commercetools';
+import { CommercetoolsClientService } from 'commercetools';
 import { TestLibService } from 'test-lib';
 
 @Injectable()
@@ -8,7 +8,7 @@ export class UniversalApiService {
 
   constructor(
     @Inject('EXTERNAL_SERVICE')
-    private service: CommercetoolsService | TestLibService
+    private service: CommercetoolsClientService | TestLibService
   ) {
     this.ecommProvider = this.service;
   }

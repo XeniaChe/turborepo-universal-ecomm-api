@@ -1,21 +1,19 @@
 import { Module } from '@nestjs/common';
 import { CustomersService } from './services/customers.service';
 import { CustomersController } from './controllers/customers.controller';
-// import { CommercetoolsModule, CommercetoolsService } from 'commercetools';
-import { ConfigModule } from '@nestjs/config';
-
+import { ConfigsService } from '../configs/configs.service';
 import { UniversalApiModule } from 'universal-api';
-// import { UniversalApiModule } from 'turborepo';
-
-//TODO: import UniversalApiModule as external npm package
+import { ConfigsModule } from 'src/configs/configs.module';
 
 @Module({
   imports: [
-    // CommercetoolsModule,
-    ConfigModule.forRoot({ isGlobal: true }),
-    UniversalApiModule.register('commTools'),
+    ConfigsModule,
+    UniversalApiModule.register(
+      'commTools', // Yet this is the only one option needed
+      new ConfigsService().generateConfigs(),
+    ),
   ],
   controllers: [CustomersController],
-  providers: [CustomersService /* , CommercetoolsService */],
+  providers: [CustomersService],
 })
 export class CustomersModule {}
