@@ -1,0 +1,21 @@
+{
+  "name": "universal-api",
+  "version": "1.0.0",
+  "main": "../../build/out-tsc/universal-api/src/index.js",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "nest build",
+    "build:prod": "nest build --webpack --webpackPath ./webpack-lib.config.js",
+    "lint": "eslint .",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@nestjs/core": "^10.1.3",
+    "commercetools": "*",
+    "eslint-config-custom": "*",
+    "nodemon-config": "*",
+    "test-lib": "*",
+    "tsconfig": "*"
+  }
+}

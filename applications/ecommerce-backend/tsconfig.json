@@ -1,0 +1,11 @@
+{
+  "extends": "tsconfig/base.json",
+  "compilerOptions": {
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "rootDir": ".",
+    "baseUrl": "./",
+    "incremental": true
+  },
+  "references": [{ "path": "tsconfig.build.json" }]
+}

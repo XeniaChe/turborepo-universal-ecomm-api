@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  ecommerce-backend:
+    container_name: ecommerce-backend
+    build:
+      context: .
+      dockerfile: ./applications/ecommerce-backend/Dockerfile
+    image: ecommerce-backend
+    env_file:
+      - ./applications/ecommerce-backend/.env
+    restart: always
+    ports:
+      - 4000:3000
